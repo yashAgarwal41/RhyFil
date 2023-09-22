@@ -1,0 +1,51 @@
+/* Custom styling for the background and headings */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f0f0f0;
+    /* Light gray background color */
+}
+/* Apply a flex container to the body */
+body {
+    display: flex;
+    flex-direction: column;
+}
+.custom-heading {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-custom {
+    background-color: #333;
+    /* Dark background color for the navbar */
+}
+.content {
+    flex-grow: 1;
+}
+
+.footer {
+    background-color: #333;
+    /* Dark background color for the footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Center content in the middle of the page */
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+}
+
+/* Styling for the content box */
+.content-box {
+    background-color: #fff;
+    /* White background for the content box */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}

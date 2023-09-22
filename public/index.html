@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RhyFil</title>
+    <!-- Include Bootstrap CSS (You should have Bootstrap CSS linked in your project) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Include your custom CSS for further styling -->
+    <link rel="stylesheet" href="index_style.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">RhyFil</a>
+        </div>
+    </nav>
+
+    <!-- Centered Content -->
+    <div class="centered-content">
+        <div class="content-box">
+            <!-- Upload Section -->
+            <div class="mb-5">
+                <h2 class="custom-heading">Upload Streaming Data</h2>
+                <form action="/import-csv" method="POST" enctype="multipart/form-data">
+                    <!-- Dropdown menu for selecting platform -->
+                    <div class="mb-3">
+                        <label for="platform" class="form-label">Select Platform:</label>
+                        <select class="form-select" id="platform" name="platform">
+                            <option value="spotify">Spotify</option>
+                            <option value="wynk">Wynk</option>
+                            <option value="youtube">Youtube</option>
+                            <option value="gaana">Gaana</option>
+                            <option value="jiosaavn">JioSaavn</option>
+                            <option value="apple">Apple</option>
+                            <option value="amazon">Amazon</option>
+                            <option value="resso">Resso</option>
+                            <option value="hungama">Hungama</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="Tiktok">Tiktok</option>
+                            <option value="snapchat">Snapchat</option>
+                            <option value="sip">SIP</option>
+                            <option value="airtel">Airtel</option>
+                            <option value="voda">Voda</option>
+                            <option value="idea">Idea</option>
+                            <option value="bsnl">BSNL</option>
+                            <!-- Add more options for other platforms if needed -->
+                        </select>
+                    </div>
+
+                    <!-- File upload input -->
+                    <div class="mb-3">
+                        <label for="file" class="form-label">Choose a file:</label>
+                        <input type="file" class="form-control" id="file" name="file">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Upload</button>
+
+                    <!-- Message box for updates -->
+                    <div id="messageBox"></div>
+                </form>
+            </div>
+
+            <!-- Search by ISRC Section -->
+            <div class="mb-5">
+                <h2 class="custom-heading">Search by ISRC</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="isrcCode" class="form-label">ISRC code:</label>
+                        <input type="text" class="form-control" id="isrcCode" placeholder="Enter ISRC Code">
+                    </div>
+
+                    <button id="downloadButton" class="btn btn-success">Download</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            &copy; 2023 RhyFil
+        </div>
+    </footer>
+
+    <!-- Include Bootstrap JS (You should have Bootstrap JS linked in your project) -->
+    <script src="path-to-bootstrap-js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<!-- Javascript -->
+<script src="index_JS.js"></script>
+<!-- SweetAlert library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
